@@ -1,0 +1,45 @@
+package pat;
+
+import java.util.HashMap;
+import java.util.Scanner;
+
+public class Main2 {
+	
+	public static void main(String[] args) {
+		Scanner in = new Scanner(System.in);
+		HashMap<String,String> py1 = new HashMap<String,String >();
+		py1.put("0", "ling");
+		py1.put("1", "yi");
+		py1.put("2", "er");
+		py1.put("3", "san");
+		py1.put("4", "si");
+		py1.put("5", "wu");
+		py1.put("6", "liu");
+		py1.put("7", "qi");
+		py1.put("8", "ba");
+		py1.put("9", "jiu");
+		
+		String number = in.next();
+		int ret = 0;
+		for(int i=0;i<number.length();i++){
+			ret += number.charAt(i) - '0';
+		}
+		
+		String s = ret+"";  
+		for(int i=0; i<s.length();i++){
+			if(i==s.length()-1){
+				System.out.print(py1.get(s.charAt(i)+""));
+			}else{
+				System.out.print(py1.get(s.charAt(i)+"")+" ");
+			}
+		}
+		
+		
+		
+		
+
+		in.close();
+
+	}
+
+}
