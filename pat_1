@@ -1,0 +1,25 @@
+package pat;
+
+import java.util.Scanner;
+public class Main1 {
+ 
+    public static void main(String[] args) {
+       Scanner in = new Scanner(System.in);
+       int number = in.nextInt();
+       int num = 0;
+       while(true){
+    	   if(number == 1 ){
+    		   break;
+    	   }
+    	   if(number%2 == 0){
+    		   number = number/2;
+    		   num++;
+    	   }else{
+    		   number = (3*number+1)/2;
+    		   num++;
+    	   }
+       }
+       System.out.println(num);
+       in.close();
+    }
+}
